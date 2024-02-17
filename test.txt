@@ -1,0 +1,21 @@
+# n=3
+# x=[]
+# for i in range(1,3**3):
+#     if i%2!=0:
+#         x.append(i)
+#     else:pass
+# # return(x)
+# for i in range(len(x)):
+#     y=
+n=3
+def find_summands(n):    
+    if n<=1:
+        return("error ")
+    x=[ i for i in range(1,n**3) if i%2!=0 ]
+    for i in range(len(x)):
+        y=x[i:i+3]
+        if sum(y)==n**3:
+            return(y)
+    return("not found")
+# print(find_summands(n))
+print(len(find_summands(n)))
